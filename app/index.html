@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Form</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+
+</head>
+<body>
+<h1>Форумчик.</h1>
+
+<div ng-app="forumApp">
+    <div>
+        <form class="form" name='form' ng-controller="formController" ng-submit="addMessage()">
+            <input class="form__input" placeholder="Заголовок" ng-model="formInfo.title" required >
+            <textarea class="form__text" placeholder="Текст сообщения"  ng-model="formInfo.body" required ></textarea>
+            <input type="submit" class="form__btn" value="Отправить" />
+        </form>
+
+        <div class="messages" ng-controller="messagesController">
+            <div ng-repeat="message in messages">
+                <div class="message">
+                    <p class="messages__title">{{message.title}}</p>
+                    <p class="messages__content ">{{message.body}}</p></div>
+            </div>
+            <p class="messages__count "><strong>Количество сообщений:</strong>{{messagesCount}}</p></div>
+        </div>
+    </div>
+</body>
+</html>

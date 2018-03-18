@@ -1,0 +1,17 @@
+{
+  "name": "forum-test-server",
+  "version": "1.0.0",
+  "description": "Small express server",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ekaterina Sokolskaya and Alex Bashlykov",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
