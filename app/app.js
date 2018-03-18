@@ -34,8 +34,8 @@ app.controller("messagesController", ['$scope', '$http', function($scope, $http)
         }).then(function (response) {
             $scope.messages = response.data;
             $scope.messagesCount = $scope.messages.length;
-        }, function (response) {
-            console.log(response.statusText);
+        }, function (error) {
+            console.log(error);
         });
     };
 
